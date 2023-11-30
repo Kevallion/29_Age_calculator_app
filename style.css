@@ -1,0 +1,226 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --color1: #854DFF;
+    --color2: black;
+    --color3: #F0F0F0;
+    --color5: #716F6F;
+    --color6: #DCDCDC;
+    --color7: #FF5959;
+    --font1: Poppins, arial;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color3);;
+    font-family: var(--font1);
+}
+
+.card{
+    margin: 0 auto;
+    background: white;
+    padding: 48px 24px;
+    border-radius:  24px 24px 100px 24px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
+.header div label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--color5);
+    letter-spacing: calc(65 * 0.01em);
+    margin-bottom: 4px;
+}
+
+.header div label.error{
+    color: var(--color7);
+}
+
+.header div input{
+    font-family: var(--font1);
+    width: 87.67px;
+    height: 54px;
+    border-radius: 8px;
+    background: none;
+    border: 1px solid var(--color6);
+    padding:12px 16px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+}
+
+.header div input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.header div input:focus{
+    outline:none;
+    border: 1px solid var(--color1);
+}
+
+.header div input.error{
+    border: 1px solid var(--color7);
+}
+
+.header div span{
+    color: var(--color7);
+    margin-top: 8px;
+    display: block;
+    font-size:0.875rem;
+    font-weight: 400;
+    font-family: var(--font1);
+    font-style: italic;
+}
+.btn-container{
+    position: relative;
+}
+button{
+    background: var(--color1);
+    position: relative;
+    z-index: 10;
+    border: none;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    margin: 32px auto;
+    display: block;
+    cursor: pointer;
+    transition: transform  0.4s ease;
+    transition: background 0.4s ease;
+}
+
+.btn-container::after{
+    position: absolute;
+    content: " ";
+    background: rgba(0, 0, 0, 0.273);
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left:0;
+}
+button img{
+    object-fit: contain;
+    width: 24px;
+    height: 24px;
+    transition: transform 2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: black;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.body p {
+    font-weight: 700;
+    font-size:3.5rem ;
+    letter-spacing: calc(-2 * 0.01rem);
+    line-height: 110%;
+    font-style: italic;
+}
+
+.body span{
+        color: var(--color1);
+        
+}
+
+@media screen and (min-width:768px) {
+    .card{
+        width: 840px;
+        min-height: 651px;
+        padding: 56px;
+        border-radius:  24px 24px 200px 24px;
+    }
+
+    .header{
+        gap: 24px;
+    }
+    
+    .header div input{
+        width: 160px;
+        height: 72px;
+        padding:12px 24px;
+        font-size: 2rem;
+        
+    }
+
+    .btn-container{
+        display: flex;
+        justify-content: end;
+    }
+    button{
+        margin: 0;
+        width: 96px;
+        height: 96px;
+    }
+
+    button img{
+        width: 44px;
+        height: 44px;
+    }
+
+    .body p {
+        font-size:6.5rem ;
+    }
+}

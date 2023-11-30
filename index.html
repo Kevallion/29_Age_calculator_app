@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+</head>
+
+<body>
+
+  <main>
+    <div class="card">
+      <div class="header">
+        <div class="dtDay">
+          <label for="day">Day</label>
+          <input type="text" placeholder="DD" maxlength="2" required id="day" autocomplete="off">
+          <span></span>
+        </div>
+
+        <div class="dtMonth">
+          <label for="month">Month</label>
+          <input type="text" placeholder="MM" maxlength="2" required id="month" autocomplete="off">
+          <span></span>
+        </div>
+
+        <div class="dtYear">
+          <label for="year">Year</label>
+          <input type="text" placeholder="YYYY" maxlength="4" required id="year" autocomplete="off">
+          <span></span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button id="btnCalculator"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow"></button>
+      </div>
+      <div class="body">
+        <p><span id="resultYear">--</span> years</p>
+        <p><span id="resultMonth">--</span> months</p>
+        <p><span id="resultDay">--</span> days</p>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="./index.js">
+  </script>
+</body>
+
+</html>
